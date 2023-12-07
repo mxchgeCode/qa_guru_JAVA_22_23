@@ -41,4 +41,18 @@ public class AndroidTests extends TestBase {
                         .shouldHave(text("Log in to Wikipedia"))
         );
     }
+
+    @DisplayName("Проверка открытия статьи в википедии")
+    @Test
+    @Tag("android")
+    void verifyOpenArticleTest() {
+        step("Нажать на кнопку поиска 1", () -> {
+            $(id("android.widget.TextView")).click();
+        });
+
+        step("Нажать на кнопку поиска 2", () -> {
+            $(id("android.widget.EditText")).click();
+        });
+    }
+
 }
